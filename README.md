@@ -3,7 +3,7 @@ Joomla! CMS™ [![Analytics](https://ga-beacon.appspot.com/UA-544070-3/joomla-cm
 
 Build Status (Staging)
 ---------------------
-[![Build Status](https://travis-ci.org/Viinx/joomla-cms.svg?branch=staging)](https://travis-ci.org/Viinx/joomla-cmss)
+[![Build Status](https://travis-ci.org/Viinx/joomla-cms.svg?branch=staging)](https://travis-ci.org/Viinx/joomla-cms)
 
 What is this?
 ---------------------
