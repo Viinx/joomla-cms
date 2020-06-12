@@ -1,0 +1,19 @@
+table {
+   @apply border-collapse table-auto w-full mt-4 whitespace-no-wrap bg-white relative;
+}
+
+table thead tr {
+    @apply text-left;
+}
+
+table thead tr th {
+    @apply bg-gray-100 sticky top-0 border-b border-gray-200 px-6 py-2 text-gray-600 font-bold tracking-wider uppercase text-xs;
+}
+
+table tbody tr td {
+    @apply border-dashed border-t border-gray-200 text-xs p-2;
+}
+
+.tooltip {
+    display: none !important;
+}

@@ -1,5 +1,4 @@
 <?php
-
 /**
  * @package     Joomla.Administrator
  * @subpackage  mod_quickicon
@@ -10,8 +9,10 @@
 
 defined('_JEXEC') or die;
 
-JLoader::register('ModQuickIconHelper', __DIR__ . '/helper.php');
-
-$buttons = ModQuickIconHelper::getButtons($params);
-
-require JModuleHelper::getLayoutPath('mod_quickicon', $params->get('layout', 'default'));
+$html = JHtml::_('links.linksgroups', ModQuickIconHelper::groupButtons($buttons));
+?>
+<?php if (!empty($html)) : ?>
+	<div class="sidebar-nav quick-icons">
+		<?php echo $html;?>
+	</div>
+<?php endif;?>

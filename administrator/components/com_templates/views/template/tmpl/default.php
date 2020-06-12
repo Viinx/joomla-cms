@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @package     Joomla.Administrator
  * @subpackage  com_templates
@@ -21,13 +22,11 @@ JHtml::_('behavior.tabstate');
 $input = JFactory::getApplication()->input;
 
 // No access if not global SuperUser
-if (!JFactory::getUser()->authorise('core.admin'))
-{
+if (!JFactory::getUser()->authorise('core.admin')) {
 	JFactory::getApplication()->enqueueMessage(JText::_('JERROR_ALERTNOAUTHOR'), 'error');
 }
 
-if ($this->type == 'image')
-{
+if ($this->type == 'image') {
 	JHtml::_('script', 'system/jquery.Jcrop.min.js', array('version' => 'auto', 'relative' => true));
 	JHtml::_('stylesheet', 'system/jquery.Jcrop.min.css', array('version' => 'auto', 'relative' => true));
 }
@@ -108,8 +107,7 @@ jQuery(document).ready(function($){
 	}
 });");
 
-if ($this->type == 'image')
-{
+if ($this->type == 'image') {
 	JFactory::getDocument()->addScriptDeclaration("
 		jQuery(document).ready(function($) {
 			var jcrop_api;
@@ -181,10 +179,9 @@ JFactory::getDocument()->addStyleDeclaration('
 	}
 ');
 
-if ($this->type == 'font')
-{
+if ($this->type == 'font') {
 	JFactory::getDocument()->addStyleDeclaration(
-			"/* Styles for font preview */
+		"/* Styles for font preview */
 		@font-face
 		{
 			font-family: previewFont;
@@ -274,10 +271,10 @@ if ($this->type == 'font')
 			<img id="image-crop" src="<?php echo $this->image['address'] . '?' . time(); ?>" />
 			<form action="<?php echo JRoute::_('index.php?option=com_templates&view=template&id=' . $input->getInt('id') . '&file=' . $this->file); ?>" method="post" name="adminForm" id="adminForm" class="form-horizontal">
 				<fieldset class="adminform">
-					<input type ="hidden" id="x" name="x" />
-					<input type ="hidden" id="y" name="y" />
-					<input type ="hidden" id="h" name="h" />
-					<input type ="hidden" id="w" name="w" />
+					<input type="hidden" id="x" name="x" />
+					<input type="hidden" id="y" name="y" />
+					<input type="hidden" id="h" name="h" />
+					<input type="hidden" id="w" name="w" />
 					<input type="hidden" name="task" value="" />
 					<?php echo JHtml::_('form.token'); ?>
 				</fieldset>
@@ -287,12 +284,18 @@ if ($this->type == 'font')
 			<div class="font-preview">
 				<form action="<?php echo JRoute::_('index.php?option=com_templates&view=template&id=' . $input->getInt('id') . '&file=' . $this->file); ?>" method="post" name="adminForm" id="adminForm" class="form-horizontal">
 					<fieldset class="adminform">
-						<p class="lead">H1</p><h1>Quickly gaze at Joomla! views from HTML, CSS, JavaScript and XML </h1>
-						<p class="lead">H2</p><h2>Quickly gaze at Joomla! views from HTML, CSS, JavaScript and XML </h2>
-						<p class="lead">H3</p><h3>Quickly gaze at Joomla! views from HTML, CSS, JavaScript and XML </h3>
-						<p class="lead">H4</p><h4>Quickly gaze at Joomla! views from HTML, CSS, JavaScript and XML </h4>
-						<p class="lead">H5</p><h5>Quickly gaze at Joomla! views from HTML, CSS, JavaScript and XML </h5>
-						<p class="lead">H6</p> <h6>Quickly gaze at Joomla! views from HTML, CSS, JavaScript and XML </h6>
+						<p class="lead">H1</p>
+						<h1>Quickly gaze at Joomla! views from HTML, CSS, JavaScript and XML </h1>
+						<p class="lead">H2</p>
+						<h2>Quickly gaze at Joomla! views from HTML, CSS, JavaScript and XML </h2>
+						<p class="lead">H3</p>
+						<h3>Quickly gaze at Joomla! views from HTML, CSS, JavaScript and XML </h3>
+						<p class="lead">H4</p>
+						<h4>Quickly gaze at Joomla! views from HTML, CSS, JavaScript and XML </h4>
+						<p class="lead">H5</p>
+						<h5>Quickly gaze at Joomla! views from HTML, CSS, JavaScript and XML </h5>
+						<p class="lead">H6</p>
+						<h6>Quickly gaze at Joomla! views from HTML, CSS, JavaScript and XML </h6>
 						<p class="lead">Bold</p><b>Quickly gaze at Joomla! views from HTML, CSS, JavaScript and XML </b>
 						<p class="lead">Italics</p><i>Quickly gaze at Joomla! views from HTML, CSS, JavaScript and XML </i>
 						<p class="lead">Unordered List</p>
@@ -351,7 +354,7 @@ if ($this->type == 'font')
 				<li>
 					<?php
 					$overrideLinkUrl = 'index.php?option=com_templates&view=template&task=template.overrides&folder=' . $module->path
-							. '&id=' . $input->getInt('id') . '&file=' . $this->file . '&' . $token;
+						. '&id=' . $input->getInt('id') . '&file=' . $this->file . '&' . $token;
 					?>
 					<a href="<?php echo JRoute::_($overrideLinkUrl); ?>">
 						<span class="icon-copy" aria-hidden="true"></span>&nbsp;<?php echo $module->name; ?>
@@ -374,7 +377,7 @@ if ($this->type == 'font')
 							<li>
 								<?php
 								$overrideLinkUrl = 'index.php?option=com_templates&view=template&task=template.overrides&folder=' . $view->path
-										. '&id=' . $input->getInt('id') . '&file=' . $this->file . '&' . $token;
+									. '&id=' . $input->getInt('id') . '&file=' . $this->file . '&' . $token;
 								?>
 								<a class="component-file-url" href="<?php echo JRoute::_($overrideLinkUrl); ?>">
 									<span class="icon-copy" aria-hidden="true"></span>&nbsp;<?php echo $view->name; ?>
@@ -400,7 +403,7 @@ if ($this->type == 'font')
 							<li>
 								<?php
 								$overrideLinkUrl = 'index.php?option=com_templates&view=template&task=template.overrides&folder=' . $plugin->path
-										. '&id=' . $input->getInt('id') . '&file=' . $this->file . '&' . $token;
+									. '&id=' . $input->getInt('id') . '&file=' . $this->file . '&' . $token;
 								?>
 								<a class="plugin-file-url" href="<?php echo JRoute::_($overrideLinkUrl); ?>">
 									<span class="icon-copy" aria-hidden="true"></span>&nbsp;<?php echo $plugin->name; ?>
@@ -417,24 +420,24 @@ if ($this->type == 'font')
 		<ul class="nav nav-list">
 			<?php $token = JSession::getFormToken() . '=' . 1; ?>
 			<?php foreach ($this->overridesList['layouts'] as $key => $value) : ?>
-			<li class="layout-folder">
-				<a href="#" class="layout-folder-url">
-					<span class="icon-folder" aria-hidden="true"></span>&nbsp;<?php echo $key; ?>
-				</a>
-				<ul class="nav nav-list">
-					<?php foreach ($value as $layout) : ?>
-						<li>
-							<?php
-							$overrideLinkUrl = 'index.php?option=com_templates&view=template&task=template.overrides&folder=' . $layout->path
+				<li class="layout-folder">
+					<a href="#" class="layout-folder-url">
+						<span class="icon-folder" aria-hidden="true"></span>&nbsp;<?php echo $key; ?>
+					</a>
+					<ul class="nav nav-list">
+						<?php foreach ($value as $layout) : ?>
+							<li>
+								<?php
+								$overrideLinkUrl = 'index.php?option=com_templates&view=template&task=template.overrides&folder=' . $layout->path
 									. '&id=' . $input->getInt('id') . '&file=' . $this->file . '&' . $token;
-							?>
-							<a href="<?php echo JRoute::_($overrideLinkUrl); ?>">
-								<span class="icon-copy" aria-hidden="true"></span>&nbsp;<?php echo $layout->name; ?>
-							</a>
-						</li>
-					<?php endforeach; ?>
-				</ul>
-			</li>
+								?>
+								<a href="<?php echo JRoute::_($overrideLinkUrl); ?>">
+									<span class="icon-copy" aria-hidden="true"></span>&nbsp;<?php echo $layout->name; ?>
+								</a>
+							</li>
+						<?php endforeach; ?>
+					</ul>
+				</li>
 			<?php endforeach; ?>
 		</ul>
 	</div>

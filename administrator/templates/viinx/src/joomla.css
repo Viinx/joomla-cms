@@ -1,0 +1,70 @@
+#j-main-container, .adminform {
+    @apply px-6;
+}
+
+fieldset.adminform {
+    @apply px-2;
+}
+
+form[name="adminForm"] {
+    /* @apply px-6; */
+}
+
+.divider {
+    @apply mx-6 my-1 border-t h-0 border-gray-600;
+}
+
+/* TABS */
+
+.tab-content {
+    @apply w-full;
+}
+
+.tab-pane {
+    @apply hidden bg-white p-6 border-black;
+}
+
+.tab-pane.active {
+    @apply block;
+}
+
+ul.nav.nav-tabs {
+    @apply flex border-b mt-4 ;
+}
+
+ul.nav.nav-tabs li {
+    @apply -mb-px mr-1;
+}
+
+ul.nav.nav-tabs li a {
+    @apply  inline-block py-2 px-4 font-normal text-xs font-semibold uppercase;
+}
+
+ul.nav.nav-tabs li a:hover {
+    @apply text-blue-800;
+}
+
+ul.nav.nav-tabs li.active a {
+    @apply bg-white border-l border-t border-r rounded-t text-blue-700;
+}
+
+
+.j-links-group.nav {
+    @apply flex flex-wrap;
+}
+
+.j-links-group.nav li {
+    @apply w-24 h-24 m-2 border-gray-500 border-2 rounded-sm uppercase ;
+}
+
+.j-links-group.nav li a {
+    @apply text-xs uppercase font-bold;
+}
+
+.j-links-group.nav .j-links-group .nav-header{
+    @apply sr-only;
+}
+
+ul.j-links-group {
+    @apply flex flex-wrap;
+}

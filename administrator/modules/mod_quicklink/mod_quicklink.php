@@ -10,8 +10,8 @@
 
 defined('_JEXEC') or die;
 
-JLoader::register('ModQuickIconHelper', __DIR__ . '/helper.php');
+JLoader::register('ModQuickLinkHelper', __DIR__ . '/helper.php');
 
-$buttons = ModQuickIconHelper::getButtons($params);
+$buttons = ModQuickLinkHelper::getButtons($params);
 
-require JModuleHelper::getLayoutPath('mod_quickicon', $params->get('layout', 'default'));
+require JModuleHelper::getLayoutPath('mod_quicklink', $params->get('layout', 'default'));

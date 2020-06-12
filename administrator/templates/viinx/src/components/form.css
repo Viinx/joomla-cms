@@ -1,0 +1,56 @@
+
+
+.tab-content input, textarea {
+    @apply border-gray-400 bg-gray-100;
+}
+
+button, input, optgroup, select, textarea {
+    @apply px-0 py-2;
+}
+
+.tab-content textarea:focus {
+    @apply  border-gray-200;
+}
+
+.tab-content > label {
+    
+}
+
+.popover {
+    @apply opacity-0;
+}
+
+.control-group {
+    @apply flex my-4;
+
+}
+
+.control-label {
+    @apply w-1/4;
+}
+
+.control-group {
+    @apply flex my-4;
+
+}
+
+.control-group * label {
+    @apply text-xs text-blue-800 font-bold uppercase;
+}
+
+.control-group * input {
+    @apply text-xs font-light px-2 py-1 border border-gray-500 ;
+}
+
+.control-group * input:focus {
+    @apply border-gray-500;
+}
+
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    @apply text-xs font-light px-2 py-2;
+}

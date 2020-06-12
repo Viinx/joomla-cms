@@ -1,17 +1,12 @@
 <?php
-
 /**
  * @package     Joomla.Administrator
- * @subpackage  mod_quickicon
+ * @subpackage  com_templates
  *
  * @copyright   Copyright (C) 2005 - 2020 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 defined('_JEXEC') or die;
-
-JLoader::register('ModQuickIconHelper', __DIR__ . '/helper.php');
-
-$buttons = ModQuickIconHelper::getButtons($params);
-
-require JModuleHelper::getLayoutPath('mod_quickicon', $params->get('layout', 'default'));
+?>
+<button type="button" class="btn" data-dismiss="modal"><?php echo JText::_('COM_TEMPLATES_TEMPLATE_CLOSE'); ?></button>
